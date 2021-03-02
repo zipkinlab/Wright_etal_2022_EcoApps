@@ -20,11 +20,10 @@ Dedicated long-term monitoring at appropriate spatial and temporal scales is nec
    - [Data-simulation_IU.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Indicator Unit design
    - [Data-simulation_RP.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Rotating Panel design
    - [Data-simulation_SP.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Split Panel design
-
 2. Bayesian model (written in JAGS) that is fit with simulated data in the step above:
-   - [jags_SR.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Stratified random design
-   - [jags_WE.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Weighted Effort design
-   - [jags_IU.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Indicator Unit design
-   - [jags_RP.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Rotating Panel design
-   - [jags_SP.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Split Panel design
+   - [jags_SR.txt](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Stratified random design
+   - [jags_WE.txt](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Weighted Effort design
+   - [jags_IU.txt](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Indicator Unit design
+   - [jags_RP.txt](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Rotating Panel design
+   - [jags_SP.txt](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Split Panel design
 3. [Results-Plots_HPCC.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_Results-Plots.R): Post simulation script that makes published tables, results, and figures.
