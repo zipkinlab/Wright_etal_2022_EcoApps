@@ -1,0 +1,171 @@
+
+model{
+
+#########
+## Part - General Model Description
+#########
+
+# Author: A.D. Wright
+# Description: This dynamic (autologistic) occupancy model analyzes simulated data. It treats species & park hierarchically - an "MRCM" model (Sutherland et al 2016)
+
+# Subscripts:
+  # i = Species; I = nSpecies; M = nZeroes
+  # j = Site; Jr = nSites per Unit; Jsamp = nSites per Unit that were sampled
+  # r = Unit; R = nUnit
+  # k = Visit; K = nVisits 
+  # y = Year; Y = nYears
+
+# Effects 
+  # Omega:     Intercept
+  # Occupancy: Intercept + Site_effect + Year_effect + Autologistic_effect
+  # Detection: Intercept
+
+#########
+## Part - Priors
+#########
+
+##
+#### Global-level priors
+##
+
+#Data Augmentation
+  #Intercept
+mean.c0 ~ dunif(0,1)
+mu.c0 <- log(mean.c0/(1-mean.c0)) 
+sd.c0 ~ dunif(0,10)
+tau.c0 <- pow(sd.c0, -2)  
+
+#Occupancy
+  #Intercepts
+mu.a0.global ~ dnorm(0, 0.37)
+sd.a0.global ~ dunif(0,10)
+sd.a0 ~ dunif(0,10)
+tau.a0.global <- pow(sd.a0.global, -2) 
+tau.a0 <- pow(sd.a0, -2) 
+  #Slopes
+    #Site Effect
+mu.a1.global ~ dnorm(0,0.1)                                  
+sd.a1.global ~ dunif(0,10)
+sd.a1 ~ dunif(0,10)
+tau.a1.global <- pow(sd.a1.global, -2)                       
+tau.a1 <- pow(sd.a1, -2)    
+    #Time effect
+mu.a2.global ~ dnorm(0,0.1)                                  
+sd.a2.global ~ dunif(0,10)
+sd.a2 ~ dunif(0,10)
+tau.a2.global <- pow(sd.a2.global, -2)                        
+tau.a2 <- pow(sd.a2, -2) 
+    #Autologistic effect
+mu.a3.global ~ dnorm(0,0.1)                                  
+sd.a3.global ~ dunif(0,10)
+sd.a3 ~ dunif(0,10)
+tau.a3.global <- pow(sd.a3.global, -2)                        
+tau.a3 <- pow(sd.a3, -2)                                      
+
+#Detection
+  #Intercepts
+mu.b0.global ~ dunif(0,0.37)
+sd.b0.global ~ dunif(0,10)
+sd.b0 ~ dunif(0,10)
+tau.b0.global <- pow(sd.b0.global, -2)                        
+tau.b0 <- pow(sd.b0, -2)                                      
+
+##
+#### Region-level priors
+##
+    
+for (r in 1:R) {
+
+  #Data Augmentation
+  l.omega[r] ~ dnorm(mu.c0, tau.c0)
+  logit(omega[r]) <- l.omega[r]
+  #Occupancy
+    #Intercept  
+  mu.a0[r] ~ dnorm(mu.a0.global, tau.a0.global)
+    #Slopes  
+  mu.a1[r] ~ dnorm(mu.a1.global, tau.a1.global)
+  mu.a2[r] ~ dnorm(mu.a2.global, tau.a2.global)
+  mu.a3[r] ~ dnorm(mu.a3.global, tau.a3.global)
+
+  #Detection
+    #Intercept
+  mu.b0[r] ~ dnorm(mu.b0.global, tau.b0.global)
+    
+##
+#### Species-level priors
+##
+
+  for (i in 1:(I+M)) {
+
+    #Data Augmentation
+    W[i,r] ~ dbern(omega[r])
+
+    #Occupancy
+      #Intercepts
+    a0[i,r] ~ dnorm(mu.a0[r],tau.a0)
+      #Slopes
+    a1[i,r] ~ dnorm(mu.a1[r],tau.a1)
+    a2[i,r] ~ dnorm(mu.a2[r],tau.a2)
+    a3[i,r] ~ dnorm(mu.a3[r],tau.a3)
+
+    #Detection
+      #Intercepts
+    b0[i,r] ~ dnorm(mu.b0[r],tau.b0)
+
+
+#########
+## Part - Likelihood
+#########
+
+##
+#### Estimating Occupancy (Z-Array)
+##
+
+    for (j in 1:Jr[r]) {
+    
+        logit(psi[j,1,i,r]) <- a0[i,r] + a1[i,r]*Site_effect_a1[j,r] + a2[i,r]*Year_effect_a2[1]
+        Z[j,1,i,r] ~ dbern(psi[j,1,i,r]*W[i,r])  
+    
+      for (y in 2:Y) { 
+
+          logit(psi[j,y,i,r]) <- a0[i,r] + a1[i,r]*Site_effect_a1[j,r] + a2[i,r]*Year_effect_a2[y] + a3[i,r]*Z[j,y-1,i,r]
+          Z[j,y,i,r] ~ dbern(psi[j,y,i,r]*W[i,r])  
+          
+      } #y
+
+##
+#### Estimating Detection (Data-Array)
+##
+
+      for (y in 1:Y) { 
+      
+        for (k in 1:K) {
+      
+          logit(p[j,k,y,i,r]) <- b0[i,r] 
+          X[j,k,y,i,r] ~ dbern(p[j,k,y,i,r]*Z[j,y,i,r])
+
+        } #k
+      } #y
+    } #j
+  } #i
+} #r
+
+##
+#### Imputation model (this is needed for the IU design)
+##
+
+for (r in 1:R) {
+
+  for (j in 1:Jr[r]) {
+    
+    Site_effect_a1[j,r] ~ dnorm(0, 1)
+    
+  } #j
+} #r
+
+
+#########
+## Part -  END
+#########
+
+} #model
