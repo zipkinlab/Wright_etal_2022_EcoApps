@@ -21,10 +21,10 @@ Dedicated long-term monitoring at appropriate spatial and temporal scales is nec
    - [Data-simulation_RP.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Rotating Panel design
    - [Data-simulation_SP.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Split Panel design
 
-5. JAGS model that is fit with simulated data in the step above:
+2. JAGS model that is fit with simulated data in the step above:
    - [jags_SR.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Stratified random design
    - [jags_WE.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Weighted Effort design
    - [jags_IU.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Indicator Unit design
    - [jags_RP.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Rotating Panel design
    - [jags_SP.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Split Panel design
-5. [Data-simulation_Results-Plots.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_Results-Plots.R): Post simulation script that makes published tables, results, and figures.
+3. [Results-Plots_HPCC.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_Results-Plots.R): Post simulation script that makes published tables, results, and figures.
