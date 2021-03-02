@@ -26,4 +26,4 @@ Dedicated long-term monitoring at appropriate spatial and temporal scales is nec
    - [jags_IU.txt](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Indicator Unit design
    - [jags_RP.txt](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Rotating Panel design
    - [jags_SP.txt](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Split Panel design
-3. [Results-Plots_HPCC.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_Results-Plots.R): Post simulation script that makes published tables, results, and figures.
+3. [Results-Plots_HPCC.R](https://github.com/lxwrght/Wright_etal_mon-simul/blob/main/Results-Plots_HPCC.R): Post simulation script that makes published tables, results, and figures.
