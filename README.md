@@ -15,9 +15,10 @@ Dedicated long-term monitoring at appropriate spatial and temporal scales is nec
 
 ## Simulation Code
 1. Code to simulate and analyze datasets
-2.    
-3. JAGS model code
-4. Figures code
-5. [MRCM.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM.R): R Code to run the multiregion community occupancy model (via JAGS through R).
-6. [MRCM.txt](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM.txt): Multiregion community occupancy JAGS model.
-7. [MRCM_Results-Plots.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_Results-Plots.R): Post analysis script for published tables, results, and figures.
+2. 
+3.  
+4. JAGS model code
+5. Figures code
+6. [MRCM.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM.R): R Code to run the multiregion community occupancy model (via JAGS through R).
+7. [MRCM.txt](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM.txt): Multiregion community occupancy JAGS model.
+8. [MRCM_Results-Plots.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_Results-Plots.R): Post analysis script for published tables, results, and figures.
