@@ -15,10 +15,10 @@ Dedicated long-term monitoring at appropriate spatial and temporal scales is nec
 
 ## Simulation Code
 1. Code used to simulate and analyze datasets for each monitoring design on the High Performance Computing Cluster at Michigan State University:
-   - [Data-simulation_SR.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Stratified random design
-   - [Data-simulation_WE.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Weighted Effort design
-   - [Data-simulation_IU.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Indicator Unit design
-   - [Data-simulation_RP.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Rotating Panel design
-   - [Data-simulation_SP.R](https://github.com/lxwrght/Wright_etal_InReview_LandEcol/blob/master/MRCM_data.R): Split Panel design
+   - [Data-simulation_SR.R](https://github.com/lxwrght/Wright_etal_mon-simul/blob/main/Data-simulation_SR.R): Stratified random design
+   - [Data-simulation_WE.R](https://github.com/lxwrght/Wright_etal_mon-simul/blob/main/Data-simulation_WE.R): Weighted Effort design
+   - [Data-simulation_IU.R](https://github.com/lxwrght/Wright_etal_mon-simul/blob/main/Data-simulation_IU.R): Indicator Unit design
+   - [Data-simulation_RP.R](https://github.com/lxwrght/Wright_etal_mon-simul/blob/main/Data-simulation_RP.R): Rotating Panel design
+   - [Data-simulation_SP.R](https://github.com/lxwrght/Wright_etal_mon-simul/blob/main/Data-simulation_SP.R): Split Panel design
 2. [mrcm_jags.txt](https://github.com/lxwrght/Wright_etal_mon-simul/blob/main/mrcm_jags.txt): Multiregion community occupancy model (written in JAGS).
 3. [Results-Plots_HPCC.R](https://github.com/lxwrght/Wright_etal_mon-simul/blob/main/Results-Plots_HPCC.R): Post simulation script that makes published tables, results, and figures.
