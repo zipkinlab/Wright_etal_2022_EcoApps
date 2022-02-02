@@ -4,7 +4,7 @@
 
 ### In Review
 
-### Code/Data DOI: [10.5281/zenodo.4577521] (https://doi.org/10.5281/zenodo.4577522)
+### Code/Data DOI: [10.5281/zenodo.4577521](https://doi.org/10.5281/zenodo.4577522)
 
 ### Please contact the first author for questions about the code or data: Alexander D. Wright (adwright@msu.edu)
 
