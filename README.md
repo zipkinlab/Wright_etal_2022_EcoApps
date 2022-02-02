@@ -2,7 +2,7 @@
 
 ### Alexander D. Wright, Evan H. Campbell Grant, and Elise F. Zipkin
 
-### In Review
+### Accepted, awaiting publication
 
 ### Code/Data DOI: [10.5281/zenodo.4577521](https://doi.org/10.5281/zenodo.4577522)
 
