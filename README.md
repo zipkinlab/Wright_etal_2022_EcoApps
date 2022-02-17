@@ -2,7 +2,7 @@
 
 ### Alexander D. Wright, Evan H. Campbell Grant, and Elise F. Zipkin
 
-### Accepted, awaiting publication
+### Accepted, awaiting publication at Ecological Applications.
 
 ### Code/Data DOI: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4577522.svg)](https://doi.org/10.5281/zenodo.4577522)
 
