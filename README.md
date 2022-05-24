@@ -1,8 +1,8 @@
-# A comparison of monitoring designs to assess wildlife community parameters across spatial scales
+# [A comparison of monitoring designs to assess wildlife community parameters across spatial scales](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/eap.2621)
 
 ### Alexander D. Wright, Evan H. Campbell Grant, and Elise F. Zipkin
 
-### Accepted, awaiting publication at Ecological Applications.
+### Ecological Applications
 
 ### Code/Data DOI: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4577522.svg)](https://doi.org/10.5281/zenodo.4577522)
 
